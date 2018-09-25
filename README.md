@@ -12,23 +12,25 @@ This is a web app that lets users view and leave comments on the latest news, bu
 
 ### Deployment
 
-* --- Please submit both the deployed Heroku link to your homework AND the link to the Github Repository! ---
+* ***Please submit both the deployed Heroku link to your homework AND the link to the Github Repository!***
 
 ## Application Breakdown
 
 * This scraper application accomplishes the following:
 
-  1. Whenever a user visits your site, the app should scrape stories from a news outlet of your choice and display them for the user. Each scraped article should be saved to your application database. At a minimum, the app should scrape and display the following information for each article:
+  1. Whenever a user visits the site, the app scrapes stories from ***Insert News Outlet Here*** and displays them for the user. The following information is scraped from each article:
 
      * Headline - the title of the article
-
      * Summary - a short summary of the article
-
      * URL - the url to the original article
+     * ***Add additional scraped content here***
 
-     * Feel free to add more content to your database (photos, bylines, and so on).
+  2. Each scraped article will be saved to a database associated with the application.
 
-  2. Users should also be able to leave comments on the articles displayed and revisit them later. The comments should be saved to the database as well and associated with their articles. Users should also be able to delete comments left on articles. All stored comments should be visible to every user.
+  4. Users are able to leave comments on the articles displayed and revisit them later.
+  5. These comments are saved to the database as well (in addition to the articles) and they are associated with their respective articles.
+  6. Users can also delete comments left on articles.
+  7. All stored comments are visible to every user.
 
 ### Assistant Links
 

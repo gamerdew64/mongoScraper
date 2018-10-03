@@ -80,6 +80,7 @@ app.get("/scrape", function(req, res) {
 app.get("/articles", function(req, res) {
   // Grab every document in the Articles collection
   db.Article.find({}).limit(50)
+  // example.find()sort.({"_id": -1}).limit(10)
     .then(function(dbArticle) {
       // If we were able to successfully find Articles, send them back to the client
       res.json(dbArticle);
@@ -126,7 +127,15 @@ app.post("/articles/:id", function(req, res) {
     });
 });
 
+// // Start the server
+// app.listen(PORT, function() {
+//   console.log("App running on port " + PORT + "!");
+// });
+
 // Start the server
 app.listen(PORT, function() {
-  console.log("App running on port " + PORT + "!");
+  // Making the output brighter, and adding different color to every word. Cause...priorities
+  console.log("\x1b[1m","\x1b[34m","\n-------------------------------------------------\n" + "\x1b[30m","This" +"\x1b[31m","application" + "\x1b[32m","is" + "\x1b[33m","listening" + "\x1b[34m","on" + "\x1b[35m","PORT:" + "\x1b[36m", PORT + "\x1b[34m","\n-------------------------------------------------\n");
+  // Resetting console formatting to default
+  console.log("\x1b[0m");
 });

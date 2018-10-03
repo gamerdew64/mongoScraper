@@ -1,0 +1,204 @@
+  /* body { background-color: red; } */
+  body {
+    /* background-image: url("assets/images/autumn.jpg"); */
+    background-image: url("../images/autumn.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+
+  .jumbotron {
+    background-image: url("../images/sky.jpg");
+    background-repeat: no-repeat;
+  }
+
+  /* h1 { */
+  .display-4 {
+    color: white;
+    text-align: center;
+    text-shadow: /* This adds an orange colored shadow effect to the words on the page to make them better stand out against the background */
+      3px 3px 0 #FF4500,
+    -1px -1px 0 #FF4500,
+     1px -1px 0 #FF4500,
+     -1px 1px 0 #FF4500,
+      1px 1px 0 #FF4500;
+    animation-duration: 5s;
+    animation-name: slidein-h1;
+  }
+  /* h2 { */
+  .display-5 {
+    color: white;
+    text-align: center;
+    text-shadow:
+      3px 3px 0 #FF4500,
+    -1px -1px 0 #FF4500,
+     1px -1px 0 #FF4500,
+     -1px 1px 0 #FF4500,
+      1px 1px 0 #FF4500;
+    animation-duration: 5s;
+    animation-name: slidein-h2;
+  }
+
+  h5 {
+    color: white;
+    text-align: center;
+    text-shadow: /* This adds an orange colored shadow effect to the words on the page to make them better stand out against the background */
+      3px 3px 0 green,
+    -1px -1px 0 green,
+     1px -1px 0 green,
+     -1px 1px 0 green,
+      1px 1px 0 green;
+  }
+
+  #wrapper {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 5%;
+  }
+  #articles {
+    padding-top: 10%;
+    color: orange;
+    display: inline-block;
+    overflow: auto;
+    width: 60%;
+    height: 700px;
+  }
+  #notes {
+    padding-top: 10%;
+    float: right;
+    width: 30%;
+  }
+  .card {
+    padding: 15px;
+    background: blue;
+    animation: color-me-in-card 60s; /* time it takes for the complete animation to complete */
+    animation-iteration-count: 25; /* will continue for roughly 15 minutes or so */
+  }
+  .card-body {
+    padding: 15px;
+    background: red;
+    animation: color-me-in-card-body 60s; /* time it takes for the complete animation to complete */
+    animation-iteration-count: 25; /* will continue for roughly 15 minutes or so */
+    text-shadow: /* This adds an orange colored shadow effect to the words on the page to make them better stand out against the background */
+      3px 3px 0 #000000,
+    -1px -1px 0 #000000,
+     1px -1px 0 #000000,
+     -1px 1px 0 #000000,
+      1px 1px 0 #000000;
+  }
+/*
+  #notesCard {
+    padding: 15px;
+    background: green;
+  }
+
+  #notesCardBody {
+    padding: 15px;
+    background: orange;
+  } */
+
+  @keyframes slidein-h1 {
+    from {
+      margin-right: 100%;
+      width: 300%;
+    }
+
+    to {
+      margin-right: 0%;
+      width: 100%;
+    }
+  }
+
+  @keyframes slidein-h2 {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+
+  /* Start background animation section*/
+  @keyframes color-me-in-card
+  {
+    /* Starts with base color --- step 1 */
+    0%
+    {
+      background: #5199A8;
+    }
+    /* Begins transition to next color at 20% */
+    20%
+    {
+      background: #055F65;
+    }
+    /* Begins transition to next color at 40% */
+    40%
+    {
+      background: #8E3843;
+    }
+    /* Begins transition to next color at 60% */
+    60%
+    {
+      background: #FFCCFF;
+    }
+    /* Begins transition to next color at 80% */
+    80%
+    {
+      background: #134913;
+    }
+    /* Begins transition to next color at 100% and completes sequence --- step 4 */
+    100%
+    {
+      background: #FFFFCC;
+    }
+  }
+  /* Start background animation section*/
+  @keyframes color-me-in-card-body
+  {
+    /* Starts with base color --- step 1 */
+    0%
+    {
+      background: #DC143C;
+    }
+    /* Begins transition to next color at 20% */
+    20%
+    {
+      background: #ff8000;
+    }
+    /* Begins transition to next color at 40% */
+    40%
+    {
+      background: #800080;
+    }
+    /* Begins transition to next color at 60% */
+    60%
+    {
+      background: #8E3843;
+    }
+    /* Begins transition to next color at 80% */
+    80%
+    {
+      background: #14dcb4;
+    }
+    /* Begins transition to next color at 100% and completes sequence --- step 4 */
+    100%
+    {
+      background: #ec7676;
+    }
+  }
+  textarea, input {
+    display: block;
+    width: 100%;
+    background-color: #FCF5C7;
+  }
+  input {
+    height: 36px;
+    font-size: 24px;
+  }
+  textarea {
+    height: 200px;
+    font-size: 18px;
+  }

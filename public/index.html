@@ -2,17 +2,45 @@
 <html lang="en-us">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
     <title>Scraping With Mongoose</title>
     <style>
       /* body { background-color: red; } */
-      body { background-image: url("assets/images/blurBackground.jpg"); }
+      body {
+        background-image: url("assets/images/autumn.jpg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+      }
       h1 {
-        color: orange;
+        color: white;
         text-align: center;
-       }
-      h2 { 
-        color: orange;
+        text-shadow: /* This adds an orange colored shadow effect to the words on the page to make them better stand out against the background */
+          3px 3px 0 #0000FF,
+        -1px -1px 0 #0000FF,
+         1px -1px 0 #0000FF,
+         -1px 1px 0 #0000FF,
+          1px 1px 0 #0000FF;
+        animation-duration: 5s;
+        animation-name: slidein-h1;
+      }
+      h2 {
+        color: white;
         text-align: center;
+        text-shadow: /* This adds an orange colored shadow effect to the words on the page to make them better stand out against the background */
+          3px 3px 0 #E47446,
+        -1px -1px 0 #E47446,
+         1px -1px 0 #E47446,
+         -1px 1px 0 #E47446,
+          1px 1px 0 #E47446;
+        animation-duration: 5s;
+        animation-name: slidein-h2;
       }
       #wrapper {
         width: 960px;
@@ -21,15 +49,126 @@
         padding-top: 5%;
       }
       #articles {
+        color: orange;
         display: inline-block;
         overflow: auto;
         width: 60%;
         height: 700px;
-        color: orange;
       }
       #notes {
         float: right;
         width: 30%;
+      }
+      .card {
+        padding: 15px;
+        background: blue;
+        animation: color-me-in-card 60s; /* time it takes for the complete animation to complete */
+        animation-iteration-count: 25; /* will continue for roughly 15 minutes or so */
+      }
+      .card-body {
+        padding: 15px;
+        background: red;
+        animation: color-me-in-card-body 60s; /* time it takes for the complete animation to complete */
+        animation-iteration-count: 25; /* will continue for roughly 15 minutes or so */
+        text-shadow: /* This adds an orange colored shadow effect to the words on the page to make them better stand out against the background */
+          3px 3px 0 #000000,
+        -1px -1px 0 #000000,
+         1px -1px 0 #000000,
+         -1px 1px 0 #000000,
+          1px 1px 0 #000000;
+      }
+
+      @keyframes slidein-h1 {
+        from {
+          margin-right: 100%;
+          width: 300%;
+        }
+
+        to {
+          margin-right: 0%;
+          width: 100%;
+        }
+      }
+
+      @keyframes slidein-h2 {
+        from {
+          margin-left: 100%;
+          width: 300%;
+        }
+
+        to {
+          margin-left: 0%;
+          width: 100%;
+        }
+      }
+
+      /* Start background animation section*/
+      @keyframes color-me-in-card
+      {
+        /* Starts with base color --- step 1 */
+        0%
+        {
+          background: #5199A8;
+        }
+        /* Begins transition to next color at 20% */
+        20%
+        {
+          background: #055F65;
+        }
+        /* Begins transition to next color at 40% */
+        40%
+        {
+          background: #8E3843;
+        }
+        /* Begins transition to next color at 60% */
+        60%
+        {
+          background: #FFCCFF;
+        }
+        /* Begins transition to next color at 80% */
+        80%
+        {
+          background: #134913;
+        }
+        /* Begins transition to next color at 100% and completes sequence --- step 4 */
+        100%
+        {
+          background: #FFFFCC;
+        }
+      }
+      /* Start background animation section*/
+      @keyframes color-me-in-card-body
+      {
+        /* Starts with base color --- step 1 */
+        0%
+        {
+          background: #DC143C;
+        }
+        /* Begins transition to next color at 20% */
+        20%
+        {
+          background: #ff8000;
+        }
+        /* Begins transition to next color at 40% */
+        40%
+        {
+          background: #800080;
+        }
+        /* Begins transition to next color at 60% */
+        60%
+        {
+          background: #8E3843;
+        }
+        /* Begins transition to next color at 80% */
+        80%
+        {
+          background: #14dcb4;
+        }
+        /* Begins transition to next color at 100% and completes sequence --- step 4 */
+        100%
+        {
+          background: #ec7676;
+        }
       }
       textarea, input {
         display: block;
@@ -47,10 +186,16 @@
     </style>
   </head>
   <body>
+
+
     <div id="wrapper">
       <h1><em>Mongo Scraper Application</em></h1>
-      <h2><i>Please see the following Chicago Tribune articles, and leave some notes!</i></h2>
-      <div id="articles"></div>
+      <h2><i>Please see the following Chicago Tribune articles, and leave some notes on the headlines you like!</i></h2>
+      <div id="articles">
+        <div class="card">
+          <div class="card-body"></div>
+        </div>
+      </div>
       <div id="notes"></div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

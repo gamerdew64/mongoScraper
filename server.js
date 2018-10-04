@@ -30,7 +30,7 @@ app.use(express.static("public"));
 // mongoose.connect("mongodb://localhost/week18Populater");
 
 // If deployed, use the deployed database. Otherwise use the local mongoHeadlines database
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines1";
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines3";
 
 // Set mongoose to leverage built in JavaScript ES6 Promises
 // Connect to the Mongo DB
@@ -80,7 +80,6 @@ app.get("/scrape", function(req, res) {
 app.get("/articles", function(req, res) {
   // Grab every document in the Articles collection
   db.Article.find({}).limit(50)
-  // example.find()sort.({"_id": -1}).limit(10)
     .then(function(dbArticle) {
       // If we were able to successfully find Articles, send them back to the client
       res.json(dbArticle);

@@ -5,7 +5,7 @@ $.getJSON("/articles", function(data) {
     // Display the apropos information on the page
     // $("#articles").append("<p data-id='" + data[i]._id + "'>" + data[i].title + "<br />" + "<br />"  + "http://www.chicagotribune.com" + data[i].link + "<br />" + "--------------------------------------------------------------------------------------------------------" +"</p>");
 
-    $(".card-body").append("<p data-id='" + data[i]._id + "'>" + data[i].title + "<br />" + "<br />"  + "http://www.chicagotribune.com" + data[i].link + "<br />" + "-----------------------------------------------------------------------" +"</p>");
+    $(".card-body").append("<p data-id='" + data[i]._id + "'>" + data[i].title + "<br />" + "<hr />"  + "http://www.chicagotribune.com" + data[i].link + "<br />" + "--------------------------------------------------------------" +"</p>");
   }
 });
 

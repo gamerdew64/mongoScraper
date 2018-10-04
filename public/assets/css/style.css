@@ -15,6 +15,7 @@
   .display-4 {
     color: white;
     text-align: center;
+    font-family: 'Playfair Display', serif;
     text-shadow: /* This adds an orange colored shadow effect to the words on the page to make them better stand out against the background */
       3px 3px 0 #FF4500,
     -1px -1px 0 #FF4500,
@@ -28,6 +29,7 @@
   .display-5 {
     color: white;
     text-align: center;
+    font-family: 'Playfair Display', serif;
     text-shadow:
       3px 3px 0 #FF4500,
     -1px -1px 0 #FF4500,
@@ -56,6 +58,7 @@
     padding-top: 5%;
   }
   #articles {
+    font-family: 'Playfair Display', serif;
     padding-top: 10%;
     color: orange;
     display: inline-block;
@@ -64,6 +67,8 @@
     height: 700px;
   }
   #notes {
+    font-family: 'Playfair Display', serif;
+    color: blue;
     padding-top: 10%;
     float: right;
     width: 30%;
@@ -75,6 +80,7 @@
     animation-iteration-count: 25; /* will continue for roughly 15 minutes or so */
   }
   .card-body {
+    font-family: 'Playfair Display', serif;
     padding: 15px;
     background: red;
     animation: color-me-in-card-body 60s; /* time it takes for the complete animation to complete */

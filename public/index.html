@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <!-- Font Awesome Glyphicons -->
+    <!-- Font Awesome Glyphicons - Not currently used -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"/>
 
     <!-- Custom Google Font -->
@@ -23,28 +23,24 @@
     <title>Mongo Scraper Website</title>
   </head>
   <body>
-
+    <!-- Wrapping the jumbotron, articles and notes together -->
     <div id="wrapper">
       <div class="jumbotron jumbotron-fluid">
         <h1 class="display-4">Mongo Scraper Application</h1>
         <hr class="my-4">
-        <p class="display-5">Please see the following Chicago Tribune articles, and leave some notes on the headlines you like!</p>
+        <p class="display-5">Please see the following Chicago Tribune articles and leave some notes on the headlines!</p>
+        <p class="display-5">Clicking on a headline will toggle the notes feature!</p>
+        <p class="display-5">if you would like to edit an existing comment, you can do so by clicking the individual headline. </p>
       </div>
-
-      <!-- <h1><em>Mongo Scraper Application</em></h1>
-      <h2><i>Please see the following Chicago Tribune articles, and leave some notes on the headlines you like!</i></h2> -->
+      <!-- This is where the articles - headlines and links - are dumped -->
       <div id="articles">
         <div class="card">
           <div class="card-body"></div>
         </div>
       </div>
-      <div id="notes">
-        <!-- <div id="notesCard" class="card">
-          <div id="notesCardBody" class="card-body"></div>
-        </div> -->
-      </div>
+      <!-- This is where the notes are dumped -->
+      <div id="notes"></div>
     </div>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="app.js"></script>
   </body>

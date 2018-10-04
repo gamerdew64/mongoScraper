@@ -92,6 +92,8 @@
      -1px 1px 0 #000000,
       1px 1px 0 #000000;
   }
+
+/* Decided not to use   */
 /*
   #notesCard {
     padding: 15px;
@@ -103,18 +105,19 @@
     background: orange;
   } */
 
+  /* CSS animation for the text that shows in the jumbotron */
   @keyframes slidein-h1 {
     from {
       margin-right: 100%;
       width: 300%;
     }
-
     to {
       margin-right: 0%;
       width: 100%;
     }
   }
 
+  /* CSS animation for the text that shows in the jumbotron */
   @keyframes slidein-h2 {
     from {
       margin-left: 100%;

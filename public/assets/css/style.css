@@ -103,8 +103,9 @@
       1px 1px 0 #000000;
   }
 
-  p:hover {
+  .card-body p:hover {
     background-color: #ffb6c1;
+    cursor: pointer;
   }
 
 /* Decided not to use   */

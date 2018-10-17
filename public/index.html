@@ -23,6 +23,16 @@
     <title>Mongo Scraper Website</title>
   </head>
   <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand btn btn-primary " href="/articles">Mongo Scraper (JSON View)</a>
+        </div>
+          <form class="navbar-form navbar-left" action="/scrape" method="get">
+            <button class="navbar-brand btn btn-danger scrape">Scrape New Articles!</button>
+          </form>
+      </div>
+    </nav>
     <!-- Wrapping the jumbotron, articles and notes together -->
     <div id="wrapper">
       <div class="jumbotron jumbotron-fluid">

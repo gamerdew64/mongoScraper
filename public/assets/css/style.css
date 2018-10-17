@@ -1,14 +1,24 @@
   /* body { background-color: red; } */
-  body {
-    /* background-image: url("assets/images/autumn.jpg"); */
-    background-image: url("../images/autumn.jpg");
+  /* body {
+    background-image: url("assets/images/autumn.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
+  } */
+
+  /* This section stretches the image to fit the page and not cut of like before. */
+  html,body {
+      background: url("../images/chicago.jpeg") no-repeat center center fixed;
+      -webkit-background-size: cover; /* For WebKit*/
+      -moz-background-size: cover;    /* Mozilla*/
+      -o-background-size: cover;      /* Opera*/
+      background-size: cover;         /* Generic*/
   }
 
   .jumbotron {
-    background-image: url("../images/sky.jpg");
+    /* background-image: url("../images/sky.jpg"); */
     background-repeat: no-repeat;
+    /* Different approach to opacity */
+    background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url("../images/sky.jpg");
   }
 
   /* h1 { */
@@ -91,6 +101,10 @@
      1px -1px 0 #000000,
      -1px 1px 0 #000000,
       1px 1px 0 #000000;
+  }
+
+  p:hover {
+    background-color: #ffb6c1;
   }
 
 /* Decided not to use   */

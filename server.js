@@ -76,7 +76,10 @@ app.get("/scrape", function(req, res) {
     });
 
     // If the scrape route was hit successfully scrape the data and save an Article, then send a message to the client
-    res.send("Scrape has been completed!");
+    // res.send("Scrape has been completed!");
+
+    // Redirecting user to home page after scraping
+    res.redirect('/');
   });
 });
 
